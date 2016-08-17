@@ -1,0 +1,12 @@
+.todo{
+  list-style: none;
+  width: auto;
+  padding: 3px;
+}
+
+
+.completed{
+  color: white;
+  background-color: green;
+  border-radius: 4px;
+}

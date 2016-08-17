@@ -6,26 +6,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require('@angular/core');
+var todo_1 = require("../todo");
 var TodosComponent = (function () {
     function TodosComponent() {
     }
     TodosComponent.prototype.add_todo = function () {
-        this.todos.push({
-            title: this.todo_name,
-            completed: false
-        });
+        var todo = new todo_1.Todo(this.todo_name);
+        this.todos.push(todo);
         this.todo_name = "";
     };
-    TodosComponent.prototype.complete_todo = function (todo) {
-        todo.completed = !todo.completed;
-    };
     TodosComponent.prototype.ngOnInit = function () {
-        this.todos = [
-            {
-                title: "Meeting",
-                completed: true
-            }
-        ];
+        this.todos = [];
+        this.todo_name = '';
     };
     TodosComponent = __decorate([
         core_1.Component({

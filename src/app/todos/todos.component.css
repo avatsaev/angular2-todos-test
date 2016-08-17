@@ -1,12 +1,15 @@
-.completed{
-  color: white;
-  background-color: green;
 
-  border-radius: 3px;
-}
 
 .todo{
   list-style: none;
   width: auto;
   padding: 3px;
+}
+
+
+.completed{
+  color: white;
+  background-color: green;
+  border-radius: 4px;
+  margin-bottom: 5px;
 }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Todo} from "../todo";
+
 
 @Component({
   moduleId: module.id,
@@ -18,25 +20,18 @@ export class TodosComponent implements OnInit {
   }
 
   add_todo(){
-    this.todos.push({
-      title: this.todo_name,
-      completed: false
-    });
+    let todo:Todo = new Todo(this.todo_name);
 
+    this.todos.push(todo);
     this.todo_name = "";
   }
 
-  complete_todo(todo){
-    todo.completed = !todo.completed;
-  }
+
 
   ngOnInit() {
-    this.todos = [
-      {
-        title: "Meeting",
-        completed: true
-      }
-    ];
+    this.todos = [];
+    this.todo_name = '';
+
   }
 
 }

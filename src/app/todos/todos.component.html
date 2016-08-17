@@ -1,22 +1,23 @@
-<h1>ToDo List:</h1>
-<form (submit)="add_todo()">
+<h1>Todo List:</h1>
 
-  <label for="todo_name">
+<form >
+
+  <label >
     Title:
   </label>
   <input type="text" name="todo_name" [(ngModel)]="todo_name">
+  <button (click)="add_todo()">Add</button>
 </form>
 <ul>
 
-  <li class="todo" *ngFor="let todo of todos" [class.completed]="todo.completed">
+    <li class="todo" *ngFor="let todo of todos" [class.completed]="todo.completed">
 
-    <button (click)="complete_todo(todo)">
-      <span *ngIf="!todo.completed"> Completed </span>
-      <span *ngIf="todo.completed"> Pending </span>
-    </button>
+      <button (click)="todo.complete()">
+        <span *ngIf="!todo.completed"> Completed </span>
+        <span *ngIf="todo.completed"> Pending </span>
+      </button>
 
-    {{todo.title}}
+      {{todo.title}}
+    </li>
 
-
-  </li>
 </ul>

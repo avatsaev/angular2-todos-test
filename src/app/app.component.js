@@ -6,7 +6,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require('@angular/core');
-var todos_component_1 = require('./todos/todos.component');
+var todos_1 = require('./todos');
 var AppComponent = (function () {
     function AppComponent() {
         this.title = 'app works!';
@@ -17,7 +17,7 @@ var AppComponent = (function () {
             selector: 'app-root',
             templateUrl: 'app.component.html',
             styleUrls: ['app.component.css'],
-            directives: [todos_component_1.TodosComponent]
+            directives: [todos_1.TodosComponent]
         })
     ], AppComponent);
     return AppComponent;
